@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "Crang";
+  src: url("./assets/fonts/Crang.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pixellari";
+  src: url("./assets/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "flowbite";
+
+@layer base {
+  html {
+    font-family: Pixellari, system-ui, sans-serif;
+  }
+  
+  /* Set dark mode as default */
+  :root {
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply bg-[#121212] text-white;
+  }
+  
+  /* Add dark mode class to html by default */
+  html {
+    @apply dark;
+  }
+
+  /* Improve table readability */
+  table {
+    @apply w-full border-collapse;
+  }
+
+  th {
+    @apply text-left py-2 px-3 text-sm font-semibold text-gray-300 border-b border-[#374151];
+  }
+
+  td {
+    @apply py-2 px-3 text-sm border-b border-[#2D3748];
+  }
+
+  /* Improve form elements */
+  input, select, textarea {
+    @apply bg-[#1E1E2E] border border-[#374151] rounded-lg px-3 py-2 text-white focus:ring-2 focus:ring-[#3B82F6] focus:border-[#3B82F6] focus:outline-none;
+  }
+
+  /* Improve button styling */
+  button {
+    @apply transition-colors duration-200;
+  }
+
+  /* Improve headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-white;
+  }
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#1E1E2E];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#4B5563] rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#6B7280];
+}
+
+/* Custom classes for data visualization */
+.positive-value {
+  @apply text-[#10B981] font-medium;
+}
+
+.negative-value {
+  @apply text-[#EF4444] font-medium;
+}
+
+.neutral-value {
+  @apply text-[#9CA3AF];
+}
+
+/* Card styling */
+.card {
+  @apply bg-[#1E1E2E] border border-[#374151] rounded-lg shadow-lg p-5;
+}
+
+.card-header {
+  @apply text-lg font-semibold text-white mb-4 border-b border-[#374151] pb-2;
+}
+
+.card-body {
+  @apply text-[#E5E7EB];
+}
+
+/* Tooltip styling */
+.tooltip {
+  @apply absolute z-10 bg-[#1E1E2E] text-white text-sm py-1 px-2 rounded border border-[#374151] shadow-lg;
+}

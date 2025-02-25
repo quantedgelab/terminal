@@ -1,0 +1,26 @@
+/* Style untuk tombol wallet - Light Mode */
+.wallet-adapter-button {
+  background-color: #00423d !important;
+  color: #ffffff !important;
+}
+
+.wallet-adapter-button-trigger {
+  background-color: #00423d !important;
+  color: #ffffff !important;
+}
+
+/* Style untuk tombol wallet - Dark Mode */
+.dark .wallet-adapter-button,
+.dark .wallet-adapter-button-trigger {
+  background-color: #f0efea !important;
+  color: #00423d !important;
+}
+
+/* Hover states */
+.wallet-adapter-button-trigger:hover {
+  opacity: 0.8;
+}
+
+.dark .wallet-adapter-button-trigger:hover {
+  opacity: 0.8;
+}
